@@ -1,0 +1,58 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Quizproject</string>
+    <string name="backButton">Back</string>
+    <string name="nextButton">Next</string>
+    <string name="question">Question<xliff:g example="Who is this fella" id="addQuestion">%b</xliff:g></string>
+    <string name="answerOne">AnswerOne<xliff:g example="Marvin Gaye" id="addQuestion">%b</xliff:g></string>
+    <string name="answerTwo">AnswerTwo<xliff:g example="Jack Black" id="addQuestion">%b</xliff:g></string>
+    <string name="answerThree">AnswerThree<xliff:g example="pope benedict xvi" id="addQuestion">%b</xliff:g></string>
+    <!-- toasts -->
+    <string name="correct"> that is correct! you are simply the best</string>
+    <string name="incorrect">wheEAAAAA WRONG!!! </string>
+    <!-- 0 score -->
+    <string name="initialScoreValue">0</string>
+    <!-- quiz 1e main page question-->
+    <string name="mainQuestion">Who do you think this lady is?</string>
+    <string name="mainAnswerOne">Oprah winfrey</string>
+    <string name="mainAnswerTwo">Michele Obama</string>
+    <string name="mainAnswerThree">Nina Simone</string>
+    <!-- quiz question 1 -->
+    <string name="firstQuestion">Who is this fella</string>
+    <string name="firstAnswerOne">Marvin Gaye</string>
+    <string name="firstAnswerTwo">Jack Black</string>
+    <string name="firstAnswerThree">pope benedict xvi</string>
+    <!-- quiz question 2 -->
+    <string name="secondQuestion">And who do you Think this is?</string>
+    <string name="secondAnswerOne">Pamela anderson</string>
+    <string name="secondAnswerTwo">Jack Black</string>
+    <string name="secondAnswerThree">Mick Jagger</string>
+    <!-- quiz question 3 -->
+    <string name="thirdQuestion">And who do you Think this is?</string>
+    <string name="thirdAnswerOne">Elton John</string>
+    <string name="thirdAnswerTwo">Some guy with glasses</string>
+    <string name="thirdAnswerThree">Still Mick Jagger</string>
+    <!-- quiz question 4 -->
+    <string name="forthQuestion">And who do you Think this is?</string>
+    <string name="forthAnswerOne">Mama</string>
+    <string name="forthAnswerTwo">Freddie Mercury</string>
+    <string name="forthAnswerThree">Mia</string>
+    <!-- quiz question 5 -->
+    <string name="fifthQuestion">And who do you Think this is?</string>
+    <string name="fifthAnswerOne">Jimmy Page</string>
+    <string name="fifthAnswerTwo">Some guy with a green guitar</string>
+    <string name="fifthAnswerThree">Mick Jagger</string>
+    <!-- quiz question 6 -->
+    <string name="sixthQuestion">And who do you Think this is?</string>
+    <string name="sixthAnswerOne">Trump</string>
+    <string name="sixthAnswerTwo">Obama</string>
+    <string name="sixthAnswerThree">Micheal Jackson</string>
+    <!-- quiz question 7 -->
+    <string name="seventhQuestion">And who do you Think this is?</string>
+    <string name="seventhAnswerOne">Robert Plant Caricature</string>
+    <string name="seventhAnswerTwo">Jack Black</string>
+    <string name="seventhAnswerThree">Eddie Vader</string>
+
+
+
+
+</resources>
