@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    >
+    android:background="@color/colorAccent">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
         android:layout_margin="50dp"
+        android:text="This is My Quiz App, i picked some famous persons that were cartoonie drawn and i hop you will recognize them"
         android:textColor="@color/colorPrimaryDark"
-        android:text="This is My Quiz App, i picked some famous persons that ware cartoonie drawn and i hop you wil reconize them" />
+        android:textSize="30dp" />
+
     <Button
-        android:onClick="startButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="50dp"
-        android:text="Start"
-        android:background="@drawable/buttonstartpage"/>
-
-
-
+        android:background="@drawable/buttonstartpage"
+        android:onClick="startButton"
+        android:text="Start" />
 </RelativeLayout>

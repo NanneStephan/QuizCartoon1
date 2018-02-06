@@ -11,14 +11,16 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    int question = 0;
+    int score = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.startingpage);
     }
 
-    int question = 0;
-    int score = 0;
 
     public void startButton(View view) {
         question = question + 1;
@@ -30,82 +32,87 @@ public class MainActivity extends AppCompatActivity {
     public void nextButton(View view) {
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
         radioGroup.clearCheck();
+        ImageView cartoonImage = (ImageView) findViewById(R.id.cartoonImage);
+        TextView questionText = (TextView) findViewById(R.id.questionText);
+        RadioButton answerOne = (RadioButton) findViewById(R.id.answerOne);
+        RadioButton answerTwo = (RadioButton) findViewById(R.id.answerTwo);
+        RadioButton answerThree = (RadioButton) findViewById(R.id.answerThree);
         if (question == 0) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.ninasimone);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.mainAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.mainAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.mainAnswerThree));
+            cartoonImage.setImageResource(R.drawable.ninasimone);
+            questionText.setText(getText(R.string.mainAnswerOne));
+            answerTwo.setText(getText(R.string.mainAnswerTwo));
+            answerThree.setText(getText(R.string.mainAnswerThree));
             question = question + 1;
             return;
         }
 
         // Question 2
         if (question == 1) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.jackblack);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.firstQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.firstAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.firstAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.firstAnswerThree));
+            cartoonImage.setImageResource(R.drawable.jackblack);
+            questionText.setText(getText(R.string.firstQuestion));
+            answerOne.setText(getText(R.string.firstAnswerOne));
+            answerTwo.setText(getText(R.string.firstAnswerTwo));
+            answerThree.setText(getText(R.string.firstAnswerThree));
             question = question + 1;
             return;
         }
         // Question 3
         if (question == 2) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.mickjagger);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.secondQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.secondAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.secondAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.secondAnswerThree));
+            cartoonImage.setImageResource(R.drawable.mickjagger);
+            questionText.setText(getText(R.string.secondQuestion));
+            answerOne.setText(getText(R.string.secondAnswerOne));
+            answerTwo.setText(getText(R.string.secondAnswerTwo));
+            answerThree.setText(getText(R.string.secondAnswerThree));
             question = question + 1;
             return;
         }
         // Question 4
         if (question == 3) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.eltonjohn);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.thirdQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.thirdAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.thirdAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.thirdAnswerThree));
+            cartoonImage.setImageResource(R.drawable.eltonjohn);
+            questionText.setText(getText(R.string.thirdQuestion));
+            answerOne.setText(getText(R.string.thirdAnswerOne));
+            answerTwo.setText(getText(R.string.thirdAnswerTwo));
+            answerThree.setText(getText(R.string.thirdAnswerThree));
             question = question + 1;
             return;
         }
         // Question 5
         if (question == 4) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.freddiemercury);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.forthQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.forthAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.forthAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.forthAnswerThree));
+            cartoonImage.setImageResource(R.drawable.freddiemercury);
+            questionText.setText(getText(R.string.forthQuestion));
+            answerOne.setText(getText(R.string.forthAnswerOne));
+            answerTwo.setText(getText(R.string.forthAnswerTwo));
+            answerThree.setText(getText(R.string.forthAnswerThree));
             question = question + 1;
             return;
         }
         // Question 6
         if (question == 5) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.jimmypage);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.fifthQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.fifthAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.fifthAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.fifthAnswerThree));
+            cartoonImage.setImageResource(R.drawable.jimmypage);
+            questionText.setText(getText(R.string.fifthQuestion));
+            answerOne.setText(getText(R.string.fifthAnswerOne));
+            answerTwo.setText(getText(R.string.fifthAnswerTwo));
+            answerThree.setText(getText(R.string.fifthAnswerThree));
             question = question + 1;
             return;
         }
         // Question 7
         if (question == 6) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.michaeljackson);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.sixthQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.sixthAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.sixthAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.sixthAnswerThree));
+            cartoonImage.setImageResource(R.drawable.michaeljackson);
+            questionText.setText(getText(R.string.sixthQuestion));
+            answerOne.setText(getText(R.string.sixthAnswerOne));
+            answerTwo.setText(getText(R.string.sixthAnswerTwo));
+            answerThree.setText(getText(R.string.sixthAnswerThree));
             question = question + 1;
             return;
         }
         // Question 8
         if (question == 7) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.robertplantcaricature);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.seventhQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.seventhAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.seventhAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.seventhAnswerThree));
+            cartoonImage.setImageResource(R.drawable.robertplantcaricature);
+            questionText.setText(getText(R.string.seventhQuestion));
+            answerOne.setText(getText(R.string.seventhAnswerOne));
+            answerTwo.setText(getText(R.string.seventhAnswerTwo));
+            answerThree.setText(getText(R.string.seventhAnswerThree));
             question = question + 1;
             return;
         }
@@ -118,83 +125,91 @@ public class MainActivity extends AppCompatActivity {
     public void backButton(View view) {
         RadioGroup radioGroup = findViewById(R.id.radioGroup);
         radioGroup.clearCheck();
+        ImageView cartoonImage = (ImageView) findViewById(R.id.cartoonImage);
+        TextView questionText = (TextView) findViewById(R.id.questionText);
+        RadioButton answerOne = (RadioButton) findViewById(R.id.answerOne);
+        RadioButton answerTwo = (RadioButton) findViewById(R.id.answerTwo);
+        RadioButton answerThree = (RadioButton) findViewById(R.id.answerThree);
+        score = score - 1;
+        displayScore(score);
+
         if (question == 1) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.ninasimone);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.mainAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.mainAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.mainAnswerThree));
+            cartoonImage.setImageResource(R.drawable.ninasimone);
+            questionText.setText(getText(R.string.mainAnswerOne));
+            answerOne.setText(getText(R.string.mainAnswerTwo));
+            answerThree.setText(getText(R.string.mainAnswerThree));
             question = question - 1;
             return;
         }
 
         // Question 2
         if (question == 2) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.jackblack);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.firstQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.firstAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.firstAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.firstAnswerThree));
+            cartoonImage.setImageResource(R.drawable.jackblack);
+            questionText.setText(getText(R.string.firstQuestion));
+            answerOne.setText(getText(R.string.firstAnswerOne));
+            answerTwo.setText(getText(R.string.firstAnswerTwo));
+            answerThree.setText(getText(R.string.firstAnswerThree));
             question = question - 1;
             return;
         }
         // Question 3
         if (question == 3) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.mickjagger);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.secondQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.secondAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.secondAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.secondAnswerThree));
+            cartoonImage.setImageResource(R.drawable.mickjagger);
+            questionText.setText(getText(R.string.secondQuestion));
+            answerOne.setText(getText(R.string.secondAnswerOne));
+            answerTwo.setText(getText(R.string.secondAnswerTwo));
+            answerThree.setText(getText(R.string.secondAnswerThree));
             question = question - 1;
 
 
         }
         // Question 4
         if (question == 4) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.eltonjohn);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.thirdQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.thirdAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.thirdAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.thirdAnswerThree));
+            cartoonImage.setImageResource(R.drawable.eltonjohn);
+            questionText.setText(getText(R.string.thirdQuestion));
+            answerOne.setText(getText(R.string.thirdAnswerOne));
+            answerTwo.setText(getText(R.string.thirdAnswerTwo));
+            answerThree.setText(getText(R.string.thirdAnswerThree));
             question = question - 1;
             return;
         }
         // Question 5
         if (question == 5) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.freddiemercury);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.forthQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.forthAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.forthAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.forthAnswerThree));
+            cartoonImage.setImageResource(R.drawable.freddiemercury);
+            questionText.setText(getText(R.string.forthQuestion));
+            answerOne.setText(getText(R.string.forthAnswerOne));
+            answerTwo.setText(getText(R.string.forthAnswerTwo));
+            answerThree.setText(getText(R.string.forthAnswerThree));
             question = question - 1;
             return;
         }
         // Question 6
         if (question == 6) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.jimmypage);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.fifthQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.fifthAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.fifthAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.fifthAnswerThree));
+            cartoonImage.setImageResource(R.drawable.jimmypage);
+            questionText.setText(getText(R.string.fifthQuestion));
+            answerOne.setText(getText(R.string.fifthAnswerOne));
+            answerTwo.setText(getText(R.string.fifthAnswerTwo));
+            answerThree.setText(getText(R.string.fifthAnswerThree));
             question = question - 1;
             return;
         }
         // Question 7
         if (question == 7) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.michaeljackson);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.sixthQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.sixthAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.sixthAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.sixthAnswerThree));
+            cartoonImage.setImageResource(R.drawable.michaeljackson);
+            questionText.setText(getText(R.string.sixthQuestion));
+            answerOne.setText(getText(R.string.sixthAnswerOne));
+            answerTwo.setText(getText(R.string.sixthAnswerTwo));
+            answerThree.setText(getText(R.string.sixthAnswerThree));
             question = question - 1;
             return;
         }
         // Question 8
         if (question == 8) {
-            ((ImageView) findViewById(R.id.cartoonImage)).setImageResource(R.drawable.robertplantcaricature);
-            ((TextView) findViewById(R.id.questionText)).setText(getText(R.string.seventhQuestion));
-            ((RadioButton) findViewById(R.id.answerOne)).setText(getText(R.string.seventhAnswerOne));
-            ((RadioButton) findViewById(R.id.answerTwo)).setText(getText(R.string.seventhAnswerTwo));
-            ((RadioButton) findViewById(R.id.answerThree)).setText(getText(R.string.seventhAnswerThree));
+            cartoonImage.setImageResource(R.drawable.robertplantcaricature);
+            questionText.setText(getText(R.string.seventhQuestion));
+            answerOne.setText(getText(R.string.seventhAnswerOne));
+            answerTwo.setText(getText(R.string.seventhAnswerTwo));
+            answerThree.setText(getText(R.string.seventhAnswerThree));
             question = question - 1;
         }
 
@@ -213,10 +228,13 @@ public class MainActivity extends AppCompatActivity {
                     // first radio button
                     // correct
                     if (question == 4)
-                        Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
+                        score = score + 1;
+                Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 if (question == 6)
+                    score = score + 1;
                     Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 if (question == 8)
+                    score = score + 1;
                     Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 // wrong
                 if (question == 2)
@@ -234,14 +252,17 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Nope", Toast.LENGTH_SHORT).show();
 
                 //else Toast.makeText(this, "NOPE", Toast.LENGTH_SHORT).show();
+                displayScore(score);
                 break;
             case R.id.answerTwo:
                 if (checked)
                     // second radio button
                     // correct
                     if (question == 2)
+                        score = score + 1;
                         Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 if (question == 5)
+                    score = score + 1;
                     Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 // wrong
                 if (question == 0)
@@ -260,6 +281,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Nope", Toast.LENGTH_SHORT).show();
 
                 // else Toast.makeText(this, "NOPE", Toast.LENGTH_SHORT).show();
+                displayScore(score);
                 break;
 
             case R.id.answerThree:
@@ -268,13 +290,19 @@ public class MainActivity extends AppCompatActivity {
                     // correct
 
                     if (question == 0)
-                        Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
+                        score = score + 1;
+                Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
+
+
                 if (question == 1)
-                    Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
+                    score = score + 1;
+                Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 if (question == 3)
-                    Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
+                    score = score + 1;
+                Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 if (question == 7)
-                    Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
+                    score = score + 1;
+                Toast.makeText(this, "That is correct", Toast.LENGTH_SHORT).show();
                 // wrong
                 if (question == 2)
                     Toast.makeText(this, "Nope", Toast.LENGTH_SHORT).show();
@@ -288,10 +316,16 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(this, "Nope", Toast.LENGTH_SHORT).show();
 
                 // else Toast.makeText(this, "NOPE", Toast.LENGTH_SHORT).show();
+                displayScore(score);
 
                 break;
 
         }
+    }
+
+    public void displayScore(int score) {
+        TextView viewScore = findViewById(R.id.viewScore);
+        viewScore.setText("" + score);
     }
 
     public void resetButton(View view) {
